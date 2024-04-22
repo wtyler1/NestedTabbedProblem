@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NestedTabbed.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NestedTabbed"
+    xmlns:pages="clr-namespace:NestedTabbed.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.BackgroundColor="White"
+    BackgroundColor="White"
+    Title="NestedTabbed">
+    <TabBar>
+        
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="About" >
+            <ShellContent Title="About"
+                ContentTemplate="{DataTemplate pages:Assignment}"
+                Route="AboutPage" />
+            
+            <ShellContent  Title="About"
+             ContentTemplate="{DataTemplate pages:NewPage1}"
+             Route="AboutPage" />
+            
+            <ShellContent Title="About"
+             ContentTemplate="{DataTemplate pages:NewPage2}"
+             Route="AboutPage" />
+        </Tab>
+    </TabBar>
+   
+</Shell>
