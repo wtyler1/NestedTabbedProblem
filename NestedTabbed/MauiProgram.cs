@@ -14,7 +14,7 @@ namespace NestedTabbed
                  {
 #if  IOS
 
-                    handlers.AddHandler(typeof(Shell), typeof(NestedTabbed.Platforms.iOS.CustomShellRenderer));
+                   handlers.AddHandler(typeof(Shell), typeof(NestedTabbed.Platforms.iOS.CustomShellRenderer));
 #endif
 
                  })
